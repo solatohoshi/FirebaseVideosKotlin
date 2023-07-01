@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "411408901337",
+    "project_id": "fir-videos-kotlin-d9ed3",
+    "storage_bucket": "fir-videos-kotlin-d9ed3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411408901337:android:bd8f6bd480e4d19b754ac8",
+        "android_client_info": {
+          "package_name": "algonquin.cst2335.firebasevideoskotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411408901337-od92lhu9vsnho08foun35ct4hpb76dtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExFQV_s2uLz_rKC29JjmJz8ekdA5JepI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411408901337-od92lhu9vsnho08foun35ct4hpb76dtv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
