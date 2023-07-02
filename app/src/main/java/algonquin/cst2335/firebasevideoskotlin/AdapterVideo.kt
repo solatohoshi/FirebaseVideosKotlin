@@ -67,33 +67,26 @@ class AdapterVideo (
             //video is prepared to play
             mediaPlayer.start()
         }
-//        holder.videoView.setOnInfoListener(MediaPlayer.OnInfoListener{mp, what, extra ->
-//            when(what){
-//                MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START ->{
-//                    //rendering started
-//                    holder.progressBar.visibility = View.VISIBLE
-//                    return@OnInfoListener true
-//                }
-//                MediaPlayer.MEDIA_INFO_BUFFERING_START -> {
-//                    // Buffering started
-//                    // Show the progress bar
-//                    holder.progressBar.visibility = View.VISIBLE
-//
-//                    // Delay hiding the progress bar for 1 second (adjust the duration as needed)
-//                    android.os.Handler().postDelayed({
-//                        holder.progressBar.visibility = View.GONE
-//                    }, 1000)
-//
-//                    return@OnInfoListener true
-//                }
-//                MediaPlayer.MEDIA_INFO_BUFFERING_END -> {
-//                    // Buffering ended
-//                    holder.progressBar.visibility = View.GONE
-//                    return@OnInfoListener true
-//                }
-//            }
-//            false
-//        })
+        holder.videoView.setOnInfoListener(MediaPlayer.OnInfoListener{mp, what, extra ->
+            when(what){
+                MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START ->{
+                    //rendering started
+                    holder.progressBar.visibility = View.VISIBLE
+                    return@OnInfoListener true
+                }
+                MediaPlayer.MEDIA_INFO_BUFFERING_START ->{
+                    //buffering started
+                    holder.progressBar.visibility = View.GONE
+                    return@OnInfoListener true
+                }
+                MediaPlayer.MEDIA_INFO_BUFFERING_END -> {
+                    // Buffering ended
+                    holder.progressBar.visibility = View.GONE
+                    return@OnInfoListener true
+                }
+            }
+            false
+        })
 
         holder.videoView.setOnCompletionListener { mediaPlayer ->
             //restart video when completed | loop video
